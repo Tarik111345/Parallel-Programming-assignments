@@ -1,0 +1,112 @@
+tarik@DESKTOP-BU13LGB:~/assignment-4$ make run
+./sum_test
+========================================
+ Global Sum (Leblanc Problem)
+========================================
+
+----------------------------------------
+ TEST n = 2^10 = 1024 elements
+  accurate 51.2000000512         sum 51.20000005120001     diff  7.105427358e-15  rel  1.387778779e-16  runtime 0.000002s   Long double
+  accurate 51.2000000512         sum 51.2000000512         diff  0  rel  0  runtime 0.000004s   Pairwise
+  accurate 51.2000000512         sum 51.2000000512         diff  0  rel  0  runtime 0.000052s   Kahan
+  accurate 51.2000000512         sum 51.2000000512         diff  0  rel  0  runtime 0.000004s   Knuth
+
+----------------------------------------
+ TEST n = 2^11 = 2048 elements
+  accurate 102.4000001024        sum 102.4000001024        diff  1.421085472e-14  rel  1.387778779e-16  runtime 0.000004s   Long double
+  accurate 102.4000001024        sum 102.4000001024        diff  0  rel  0  runtime 0.000008s   Pairwise
+  accurate 102.4000001024        sum 102.4000001024        diff  0  rel  0  runtime 0.000059s   Kahan
+  accurate 102.4000001024        sum 102.4000001024        diff  0  rel  0  runtime 0.000047s   Knuth
+
+----------------------------------------
+ TEST n = 2^12 = 4096 elements
+  accurate 204.8000002048        sum 204.8000002048        diff  0  rel  0  runtime 0.000008s   Long double
+  accurate 204.8000002048        sum 204.8000002048        diff  0  rel  0  runtime 0.000019s   Pairwise
+  accurate 204.8000002048        sum 204.8000002048        diff  0  rel  0  runtime 0.000039s   Kahan
+  accurate 204.8000002048        sum 204.8000002048        diff  0  rel  0  runtime 0.000013s   Knuth
+
+----------------------------------------
+ TEST n = 2^13 = 8192 elements
+  accurate 409.6000004096        sum 409.6000004096001     diff  5.684341886e-14  rel  1.387778779e-16  runtime 0.000015s   Long double
+  accurate 409.6000004096        sum 409.6000004096        diff  0  rel  0  runtime 0.000031s   Pairwise
+  accurate 409.6000004096        sum 409.6000004096        diff  0  rel  0  runtime 0.000077s   Kahan
+  accurate 409.6000004096        sum 409.6000004096        diff  0  rel  0  runtime 0.000029s   Knuth
+
+----------------------------------------
+ TEST n = 2^14 = 16384 elements
+  accurate 819.2000008192        sum 819.2000008192        diff  0  rel  0  runtime 0.000030s   Long double
+  accurate 819.2000008192        sum 819.2000008192        diff  0  rel  0  runtime 0.000086s   Pairwise
+  accurate 819.2000008192        sum 819.2000008192        diff  0  rel  0  runtime 0.000193s   Kahan
+  accurate 819.2000008192        sum 819.2000008192        diff  0  rel  0  runtime 0.000057s   Knuth
+
+----------------------------------------
+ TEST n = 2^15 = 32768 elements
+  accurate 1638.4000016384       sum 1638.4000016384       diff  0  rel  0  runtime 0.000063s   Long double
+  accurate 1638.4000016384       sum 1638.4000016384       diff  0  rel  0  runtime 0.000148s   Pairwise
+  accurate 1638.4000016384       sum 1638.4000016384       diff  0  rel  0  runtime 0.000343s   Kahan
+  accurate 1638.4000016384       sum 1638.4000016384       diff  0  rel  0  runtime 0.000119s   Knuth
+
+----------------------------------------
+ TEST n = 2^16 = 65536 elements
+  accurate 3276.8000032768       sum 3276.800003276801     diff  9.094947018e-13  rel  2.775557559e-16  runtime 0.000118s   Long double
+  accurate 3276.8000032768       sum 3276.8000032768       diff  0  rel  0  runtime 0.000290s   Pairwise
+  accurate 3276.8000032768       sum 3276.8000032768       diff  0  rel  0  runtime 0.000658s   Kahan
+  accurate 3276.8000032768       sum 3276.8000032768       diff  0  rel  0  runtime 0.000268s   Knuth
+
+----------------------------------------
+ TEST n = 2^17 = 131072 elements
+  accurate 6553.6000065536       sum 6553.600006553605     diff  4.547473509e-12  rel  6.938893897e-16  runtime 0.000285s   Long double
+  accurate 6553.6000065536       sum 6553.6000065536       diff  0  rel  0  runtime 0.000469s   Pairwise
+  accurate 6553.6000065536       sum 6553.6000065536       diff  0  rel  0  runtime 0.001242s   Kahan
+  accurate 6553.6000065536       sum 6553.6000065536       diff  0  rel  0  runtime 0.000350s   Knuth
+
+----------------------------------------
+ TEST n = 2^18 = 262144 elements
+  accurate 13107.2000131072      sum 13107.20001310719     diff -1.091393642e-11  rel -8.326672676e-16  runtime 0.000616s   Long double
+  accurate 13107.2000131072      sum 13107.2000131072      diff  0  rel  0  runtime 0.001109s   Pairwise
+  accurate 13107.2000131072      sum 13107.2000131072      diff  0  rel  0  runtime 0.002054s   Kahan
+  accurate 13107.2000131072      sum 13107.2000131072      diff  0  rel  0  runtime 0.000698s   Knuth
+
+----------------------------------------
+ TEST n = 2^19 = 524288 elements
+  accurate 26214.4000262144      sum 26214.40002621434     diff -5.820766091e-11  rel -2.220446047e-15  runtime 0.000753s   Long double
+  accurate 26214.4000262144      sum 26214.4000262144      diff  0  rel  0  runtime 0.001249s   Pairwise
+  accurate 26214.4000262144      sum 26214.4000262144      diff  0  rel  0  runtime 0.003055s   Kahan
+  accurate 26214.4000262144      sum 26214.4000262144      diff  0  rel  0  runtime 0.001271s   Knuth
+
+----------------------------------------
+ TEST n = 2^20 = 1048576 elements
+  accurate 52428.8000524288      sum 52428.80005242807     diff -7.275957614e-10  rel -1.387778779e-14  runtime 0.001327s   Long double
+  accurate 52428.8000524288      sum 52428.8000524288      diff  0  rel  0  runtime 0.002229s   Pairwise
+  accurate 52428.8000524288      sum 52428.8000524288      diff  0  rel  0  runtime 0.005517s   Kahan
+  accurate 52428.8000524288      sum 52428.8000524288      diff  0  rel  0  runtime 0.001684s   Knuth
+
+----------------------------------------
+ TEST n = 2^21 = 2097152 elements
+  accurate 104857.6001048576     sum 104857.6001048604     diff  2.808519639e-09  rel  2.678413044e-14  runtime 0.002059s   Long double
+  accurate 104857.6001048576     sum 104857.6001048576     diff  0  rel  0  runtime 0.002637s   Pairwise
+  accurate 104857.6001048576     sum 104857.6001048576     diff  0  rel  0  runtime 0.009513s   Kahan
+  accurate 104857.6001048576     sum 104857.6001048576     diff  0  rel  0  runtime 0.004037s   Knuth
+
+----------------------------------------
+ TEST n = 2^22 = 4194304 elements
+  accurate 209715.2002097152     sum 209715.2002097158     diff  5.820766091e-10  rel  2.775557559e-15  runtime 0.004951s   Long double
+  accurate 209715.2002097152     sum 209715.2002097152     diff  0  rel  0  runtime 0.009105s   Pairwise
+  accurate 209715.2002097152     sum 209715.2002097152     diff  0  rel  0  runtime 0.018289s   Kahan
+  accurate 209715.2002097152     sum 209715.2002097152     diff  0  rel  0  runtime 0.007378s   Knuth
+
+----------------------------------------
+ TEST n = 2^23 = 8388608 elements
+  accurate 419430.4004194304     sum 419430.4004193632     diff -6.717164069e-08  rel -1.601496711e-13  runtime 0.008960s   Long double
+  accurate 419430.4004194304     sum 419430.4004194304     diff  0  rel  0  runtime 0.010100s   Pairwise
+08  rel -6.411537961e-14  runtime 0.014738s   Long double
+  accurate 838860.8008388608     sum 838860.8008388608     diff  0  rel  0  runtime 0.023280s  accurate 8388  accurate 838860.8008388608     sum 838860.8008388608     diff  0  rel  0  runtime 0.023280s   Knuth       
+
+========================================
+ Tests complete.
+========================================
+ 0  runtime 0.023280s   Knuth
+
+========================================
+ Tests complete.
+========================================
