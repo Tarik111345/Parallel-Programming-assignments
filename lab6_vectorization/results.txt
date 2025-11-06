@@ -1,0 +1,177 @@
+tarik@DESKTOP-BU13LGB:~/lab6_vectorization$ sudo likwid-perfctr -C 0 -f -g FLOPS_DP ./opt1
+--------------------------------------------------------------------------------
+CPU name:       Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz
+CPU type:       Intel Kabylake processor
+CPU clock:      0.00 GHz
+--------------------------------------------------------------------------------
+Minimum dt is 0.016964
+--------------------------------------------------------------------------------
+Group 1: FLOPS_DP
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  |  217766722 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |  339851080 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  |  183547584 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |          0 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |   90000088 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |          0 |
++------------------------------------------+---------+------------+
+
++-------------------------+------------+
+|          Metric         | HWThread 0 |
++-------------------------+------------+
+|   Runtime (RDTSC) [s]   |          0 |
+|   Runtime unhalted [s]  |          0 |
+|       Clock [MHz]       |          0 |
+|           CPI           |     1.5606 |
+|       DP [MFLOP/s]      |          0 |
+|     AVX DP [MFLOP/s]    |          0 |
+|     Packed [MUOPS/s]    |          0 |
+|     Scalar [MUOPS/s]    |          0 |
+| Vectorization ratio [%] |          0 |
++-------------------------+------------+
+
+tarik@DESKTOP-BU13LGB:~/lab6_vectorization$ sudo likwid-perfctr -C 0 -f -g FLOPS_DP ./opt2
+--------------------------------------------------------------------------------
+CPU name:       Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz
+CPU type:       Intel Kabylake processor
+CPU clock:      0.00 GHz
+--------------------------------------------------------------------------------
+Minimum dt is 0.016964
+--------------------------------------------------------------------------------
+Group 1: FLOPS_DP
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  |  217766851 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |  334255213 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  |  175188672 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |          0 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |   90000088 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |          0 |
++------------------------------------------+---------+------------+
+
++-------------------------+------------+
+|          Metric         | HWThread 0 |
++-------------------------+------------+
+|   Runtime (RDTSC) [s]   |          0 |
+|   Runtime unhalted [s]  |          0 |
+|       Clock [MHz]       |          0 |
+|           CPI           |     1.5349 |
+|       DP [MFLOP/s]      |          0 |
+|     AVX DP [MFLOP/s]    |          0 |
+|     Packed [MUOPS/s]    |          0 |
+|     Scalar [MUOPS/s]    |          0 |
+| Vectorization ratio [%] |          0 |
++-------------------------+------------+
+
+tarik@DESKTOP-BU13LGB:~/lab6_vectorization$ sudo likwid-perfctr -C 0 -f -g FLOPS_DP ./opt3
+--------------------------------------------------------------------------------
+CPU name:       Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz
+CPU type:       Intel Kabylake processor
+CPU clock:      0.00 GHz
+--------------------------------------------------------------------------------
+Minimum dt is 0.016964
+--------------------------------------------------------------------------------
+Group 1: FLOPS_DP
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  |   85245027 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |  239370312 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  |  134284704 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |          2 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |         87 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |   20000002 |
++------------------------------------------+---------+------------+
+
++-------------------------+------------+
+|          Metric         | HWThread 0 |
++-------------------------+------------+
+|   Runtime (RDTSC) [s]   |          0 |
+|   Runtime unhalted [s]  |          0 |
+|       Clock [MHz]       |          0 |
+|           CPI           |     2.8080 |
+|       DP [MFLOP/s]      |          0 |
+|     AVX DP [MFLOP/s]    |          0 |
+|     Packed [MUOPS/s]    |          0 |
+|     Scalar [MUOPS/s]    |          0 |
+| Vectorization ratio [%] |    99.9996 |
++-------------------------+------------+
+
+tarik@DESKTOP-BU13LGB:~/lab6_vectorization$ sudo likwid-perfctr -C 0 -f -g MEM_DP ./opt3
+[sudo] password for tarik: 
+--------------------------------------------------------------------------------
+CPU name:       Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz
+CPU type:       Intel Kabylake processor
+CPU clock:      0.00 GHz
+--------------------------------------------------------------------------------
+Minimum dt is 0.016964
+--------------------------------------------------------------------------------
+Group 1: MEM_DP
+|              PWR_DRAM_ENERGY             |   PWR3  |          0 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |          2 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |         87 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |   20000002 |
+|                DRAM_READS                | MBOX0C1 |      -     |
+|                DRAM_WRITES               | MBOX0C2 |      -     |
++------------------------------------------+---------+------------+
+
++-----------------------------------+------------+
+|               Metric              | HWThread 0 |
++-----------------------------------+------------+
+|        Runtime (RDTSC) [s]        |          0 |
+|        Runtime unhalted [s]       |          0 |
+|            Clock [MHz]            |          0 |
+|                CPI                |     2.6958 |
+|             Energy [J]            |          0 |
+|             Power [W]             |          0 |
+|          Energy DRAM [J]          |          0 |
+|           Power DRAM [W]          |          0 |
+|            DP [MFLOP/s]           |          0 |
+|          AVX DP [MFLOP/s]         |          0 |
+|          Packed [MUOPS/s]         |          0 |
+|          Scalar [MUOPS/s]         |          0 |
+|  Memory load bandwidth [MBytes/s] |          0 |
+|  Memory load data volume [GBytes] |          0 |
+| Memory evict bandwidth [MBytes/s] |          0 |
+| Memory evict data volume [GBytes] |          0 |
+|    Memory bandwidth [MBytes/s]    |          0 |
+|    Memory data volume [GBytes]    |          0 |
+| Operational intensity [FLOP/Byte] |          0 |
+|      Vectorization ratio [%]      |    99.9996 |
+|                DRAM_WRITES               | MBOX0C2 |      -     |
++------------------------------------------+---------+------------+
+
++-----------------------------------+------------+
+|               Metric              | HWThread 0 |
++-----------------------------------+------------+
+|        Runtime (RDTSC) [s]        |          0 |
+|        Runtime unhalted [s]       |          0 |
+|            Clock [MHz]            |          0 |
+|                CPI                |     2.6958 |
+|             Energy [J]            |          0 |
+|             Power [W]             |          0 |
+|          Energy DRAM [J]          |          0 |
+|           Power DRAM [W]          |          0 |
+|            DP [MFLOP/s]           |          0 |
+|          AVX DP [MFLOP/s]         |          0 |
+|          Packed [MUOPS/s]         |          0 |
+|          Scalar [MUOPS/s]         |          0 |
+|  Memory load bandwidth [MBytes/s] |          0 |
+|  Memory load data volume [GBytes] |          0 |
+| Memory evict bandwidth [MBytes/s] |          0 |
+| Memory evict data volume [GBytes] |          0 |
+|    Memory bandwidth [MBytes/s]    |          0 |
+|    Memory data volume [GBytes]    |          0 |
+| Operational intensity [FLOP/Byte] |          0 |
+|      Vectorization ratio [%]      |    99.9996 |
+|  Memory load data volume [GBytes] |          0 |
+| Memory evict bandwidth [MBytes/s] |          0 |
+| Memory evict data volume [GBytes] |          0 |
+|    Memory bandwidth [MBytes/s]    |          0 |
+|    Memory data volume [GBytes]    |          0 |
+| Operational intensity [FLOP/Byte] |          0 |
+|      Vectorization ratio [%]      |    99.9996 |
++-----------------------------------+------------+
