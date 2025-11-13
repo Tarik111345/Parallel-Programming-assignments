@@ -1,0 +1,17 @@
+stencil_opt2:
+init = 0.014374
+flush = 68.373434
+stencil = 56.076041
+total = 124.469032
+
+stencil_opt4:
+init = 0.020915
+flush = 64.111631
+stencil = 57.141885
+total = 121.282829
+
+stencil_opt6:
+init = 0.022857
+flush = 64.030528
+stencil = 55.863498
+total = 122.397180
