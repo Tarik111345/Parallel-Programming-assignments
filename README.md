@@ -1,1 +1,1 @@
-# Parallel-Programming-assignments
+# ParallelComputing
